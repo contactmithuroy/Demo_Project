@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('image')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
@@ -34,3 +35,12 @@ class CreateUsersTable extends Migration
         Schema::dropIfExists('users');
     }
 }
+
+
+// $table->string('name');
+//             $table->bigInteger('role_id');
+//             $table->string('email')->unique();
+//             $table->string('photo_url')->nullable();
+//             $table->timestamp('email_verified_at')->nullable();
+//             $table->string('password');
+//             $table->foreignKey('role_id')->reference('id')->on('users');
